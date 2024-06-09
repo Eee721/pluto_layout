@@ -437,7 +437,7 @@ class _MenuContainer extends ConsumerWidget {
       child: ToggleButton(
         title: item.title,
         icon: item.icon,
-        trailing: item.showRemoveButton
+        trailing: item.tail ?? ( item.showRemoveButton
             ? IconButton(
                 iconSize: 14,
                 color: theme.disabledColor,
@@ -448,7 +448,7 @@ class _MenuContainer extends ConsumerWidget {
                 },
                 icon: const Icon(Icons.close),
               )
-            : null,
+            : null),
         enabled: item.enabled,
         changed: (flag) => toggleTab(item, flag),
       ),

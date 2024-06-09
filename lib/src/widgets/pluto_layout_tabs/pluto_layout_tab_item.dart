@@ -32,6 +32,7 @@ class PlutoLayoutTabItem {
     required this.id,
     required this.title,
     this.icon,
+    this.tail,
     this.tabViewWidget,
     this.sizeResolver = const PlutoLayoutTabItemSizeFlexible(),
     this.showRemoveButton = false,
@@ -42,6 +43,7 @@ class PlutoLayoutTabItem {
     required this.id,
     required this.title,
     this.icon,
+    this.tail,
     this.tabViewWidget,
     this.sizeResolver = const PlutoLayoutTabItemSizeFlexible(),
     this.showRemoveButton = false,
@@ -63,6 +65,8 @@ class PlutoLayoutTabItem {
   /// [icon] is the icon to display before the menu title.
   /// {@endtemplate}
   final Widget? icon;
+
+  final Widget? tail;
 
   /// {@template pluto_layout_tab_item_tabViewWidget}
   /// [tabViewWidget] is a callback function that returns a tab view widget
